@@ -1,0 +1,12 @@
+spring:
+  config:
+    import: optional:configserver:http://localhost:8888
+  application:
+    name: auth-service
+application:
+  security:
+    jwt:
+      secret-key: 3935404f7b07a8eb76b7002ef5cd2c2046c5578591461b46354ccbbabdd726b
+      expiration: 86400000 # 1 day
+      refresh-token:
+        expiration: 604800000 # 7 days

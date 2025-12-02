@@ -10,7 +10,7 @@ services:
     ports:
       - "5432:5432"
     networks:
-      - microservices-net
+      - skillbridge-net
     restart: unless-stopped
 
   mongodb:
@@ -24,7 +24,7 @@ services:
     ports:
       - "27017:27017"
     networks:
-      - microservices-net
+      - skillbridge-net
     restart: unless-stopped
 
   mongo-express:
@@ -40,22 +40,7 @@ services:
     depends_on:
       - mongodb
     networks:
-      - microservices-net
-    restart: unless-stopped
-
-  keycloak:
-    container_name: keycloak-sb
-    image: quay.io/keycloak/keycloak
-    command: start-dev
-    environment:
-      KEYCLOAK_ADMIN: admin
-      KEYCLOAK_ADMIN_PASSWORD: admin
-    volumes:
-      - keycloak:/opt/keycloak/data
-    ports:
-      - "9090:8080"
-    networks:
-      - microservices-net
+      - skillbridge-net
     restart: unless-stopped
 
   zookeeper:
@@ -68,7 +53,7 @@ services:
     ports:
       - "22181:2181"
     networks:
-      - microservices-net
+      - skillbridge-net
     restart: unless-stopped
 
   kafka:
@@ -88,7 +73,7 @@ services:
     ports:
       - "9092:9092"
     networks:
-      - microservices-net
+      - skillbridge-net
     restart: unless-stopped
 
   maildev:
@@ -98,7 +83,7 @@ services:
       - "1080:1080"
       - "1025:1025"
     networks:
-      - microservices-net
+      - skillbridge-net
     restart: unless-stopped
 
   redis:
@@ -110,11 +95,11 @@ services:
     ports:
       - "6379:6379"
     networks:
-      - microservices-net
+      - skillbridge-net
     restart: unless-stopped
 
 networks:
-  microservices-net:
+  skillbridge-net:
     driver: bridge
 
 volumes:
