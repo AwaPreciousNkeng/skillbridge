@@ -27,6 +27,7 @@ public class AuthApplication {
                     "Admin",
                     "admin@gmail.com",
                     "password",
+                    "",
                     Role.ADMIN
             );
             System.out.println("Admin token: " + service.register(admin).getAccessToken());

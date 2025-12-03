@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/SkillBridge.iml" filepath="$PROJECT_DIR$/.idea/SkillBridge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/services/config-server/config-server.iml" filepath="$PROJECT_DIR$/services/config-server/config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/services/discover/discover.iml" filepath="$PROJECT_DIR$/services/discover/discover.iml" />
     </modules>
   </component>
 </project>
