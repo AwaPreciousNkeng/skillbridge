@@ -1,0 +1,10 @@
+spring:
+  config:
+    import: optional:configserver:http://localhost:8888
+  application:
+    name: project-service
+application:
+  cloudinary:
+    cloudName: dusurvfbr
+    apiKey: 342976914616399
+    apiSecret: h7InbCMQXXtM6MJboiHAM9Ipa_k
